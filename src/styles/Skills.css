@@ -1,0 +1,104 @@
+    /* SKILLS */
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .tool-card{
+      padding:26px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--white);
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      transition:.3s var(--ease);
+    }
+    .tool-card:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow);
+      border-color:transparent;
+    }
+    .tool-top{display:flex;align-items:flex-start;gap:14px}
+    .tool-icon{
+      flex:0 0 auto;
+      width:50px;height:50px;
+      border-radius:15px;
+      background:var(--soft);
+      display:grid;
+      place-items:center;
+      color:var(--accent-dark);
+      transition:.3s var(--ease);
+    }
+    .tool-card:hover .tool-icon{
+      background:var(--white);
+      box-shadow:var(--shadow);
+      transform:scale(1.06);
+    }
+    .tool-icon svg{width:23px;height:23px}
+    .tool-icon img{width:24px;height:24px;object-fit:contain;display:block}
+    .tool-info h3{
+      font-family:Manrope,sans-serif;
+      font-size:18px;
+      font-weight:700;
+      letter-spacing:-.02em;
+      margin-bottom:4px;
+    }
+    .tool-info p{
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.55;
+    }
+    .tool-footer{
+      margin-top:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding-top:16px;
+      border-top:1px dashed var(--line);
+    }
+    .tool-dots{display:flex;gap:5px}
+    .tool-dots .dot{width:7px;height:7px;border-radius:50%;background:var(--line)}
+    .tool-dots .dot.filled{background:var(--accent-dark)}
+    .tool-tag{
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .skills-more{
+      margin-top:30px;
+      padding-top:30px;
+      border-top:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    .skills-more-label{
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .explore-chips{display:flex;flex-wrap:wrap;gap:8px}
+    .explore-chip{
+      padding:8px 15px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:var(--white);
+      font-size:12px;
+      font-weight:600;
+      color:var(--muted);
+      transition:.25s var(--ease);
+    }
+    .explore-chip:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
+
+
+@media(max-width:950px){ .skills-grid{grid-template-columns:1fr 1fr} }
+@media(max-width:650px){ .skills-grid{grid-template-columns:1fr} }
